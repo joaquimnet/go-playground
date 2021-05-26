@@ -7,6 +7,49 @@ import (
 )
 
 func main() {
+	age := 22
+
+	if age < 30 {
+		fmt.Println("You're young.")
+	} else if age < 40 {
+		fmt.Println("You're not old.")
+	} else {
+		fmt.Println("You're getting old. But it's okay!")
+	}
+
+	names := []string{"Blu", "Ikaros", "Kaffe"}
+
+	for index, value := range names {
+		if index == 1 {
+			continue
+		}
+		fmt.Println(index, value)
+	}
+}
+
+func looks() {
+	x := 0
+	for x < 5 {
+		fmt.Println("x:", x)
+		x++
+	}
+
+	for i := 0; i < 5; i++ {
+		fmt.Println("i:", i)
+	}
+
+	names := []string{"Blu", "Kaffe", "Ikaros"}
+
+	for i := 0; i < len(names); i++ {
+		fmt.Println("name:", names[i])
+	}
+
+	for index, val := range names {
+		fmt.Printf("Name at %v: %v\n", index, val)
+	}
+}
+
+func stringsSortAndSearch() {
 	greeting := "Hello there fishcake."
 
 	fmt.Println(strings.Contains(greeting, "fishcake"))
