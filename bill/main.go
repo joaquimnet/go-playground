@@ -7,6 +7,28 @@ import (
 )
 
 func main() {
+	sayGreeting("Sittle")
+	sayGreeting("Kaffe")
+
+	giveItem("Sittle Lister", []string{"Golden Coin", "Shiny Crystal", "Potato", "Key"})
+}
+
+func sayGreeting(n string) {
+	fmt.Printf("Hello %v!\n", n)
+}
+
+func giveItem(name string, items []string) {
+	fmt.Printf("%v just got %v items! ", name, len(items))
+	for i, item := range items {
+		if i == len(items)-1 {
+			fmt.Printf("%v.\n", item)
+			continue
+		}
+		fmt.Printf("%v, ", item)
+	}
+}
+
+func conditionals() {
 	age := 22
 
 	if age < 30 {
