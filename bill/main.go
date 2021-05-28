@@ -7,6 +7,30 @@ import (
 )
 
 func main() {
+	fname, lname := getInitials("blu vidact")
+	fmt.Println(fname, lname)
+
+	fname2, lname2 := getInitials("yoki okeya")
+	fmt.Println(fname2, lname2)
+}
+
+func getInitials(name string) (string, string) {
+	s := strings.ToUpper(name)
+	names := strings.Split(s, " ")
+
+	var initials []string
+	for _, v := range names {
+		initials = append(initials, v[:1])
+	}
+
+	if len(initials) > 1 {
+		return initials[0], initials[1]
+	}
+
+	return initials[0], "_"
+}
+
+func funcs1() {
 	sayGreeting("Sittle")
 	sayGreeting("Kaffe")
 
