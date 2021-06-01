@@ -7,6 +7,43 @@ import (
 )
 
 func main() {
+	menu := map[string]float64{
+		"soup":    4.99,
+		"spaghet": 7.99,
+		"salad":   3.99,
+		"yogurt":  5.99,
+	}
+
+	fmt.Println(menu)
+	fmt.Println(menu["salad"])
+
+	for k, v := range menu {
+		fmt.Println(k, "....", v)
+	}
+
+	phonebook := map[int]string{
+		5550001111: "Kaffe",
+		2224449999: "Blu",
+		1110003333: "Yoki",
+	}
+
+	fmt.Println(phonebook)
+	fmt.Println(phonebook[5550001111])
+
+	phonebook[1110003333] = "Ikaros"
+	fmt.Println(phonebook)
+
+}
+
+func otherFiles() {
+	// sayHello("Kaffe")
+
+	// for _, v := range points {
+	// 	fmt.Println(v)
+	// }
+}
+
+func multipleReturns() {
 	fname, lname := getInitials("blu vidact")
 	fmt.Println(fname, lname)
 
