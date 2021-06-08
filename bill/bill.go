@@ -9,7 +9,7 @@ type bill struct {
 }
 
 // make new bills
-func createBill(name string) bill {
+func newBill(name string) bill {
 	b := bill{
 		name:  name,
 		items: map[string]float64{"pie": 5.99, "cake": 3.99},
