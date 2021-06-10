@@ -9,9 +9,7 @@ import (
 )
 
 func main() {
-	myBill := createBill()
-	fmt.Println(myBill)
-
+	createBill()
 }
 
 func createBill() bill {
@@ -60,7 +58,7 @@ func promptOptions(b bill) {
 		fmt.Println("tip added - ", p)
 		promptOptions(b)
 	case "s":
-		fmt.Println("You chose S")
+		b.saveBill()
 	default:
 		fmt.Println("That was not a valid option")
 		promptOptions(b)
